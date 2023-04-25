@@ -9,8 +9,8 @@ export interface item {
 
 export default function Item ({albumId,id,title,url}: item) {
   return (
-<ListItem>
+
     <ItemData>{title}</ItemData>
-</ListItem>
+
   );
 }

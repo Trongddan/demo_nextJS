@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import Item from "@/components/item";
 import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
-
+import {ListItem} from "../components/item/styles"
 interface DataSer {
   data: [];
 }
@@ -18,9 +18,11 @@ export default function Home({ data }: DataSer) {
   return (
     <div className="bg-white ">
       This is the data
+      <ListItem>
       {data.map((item:item) => (
         <Item key={item.id} albumId={item.albumId} id={item.id} title={item.title} url={item.url}/>
       ))}
+      </ListItem>
       <Link href="/about">
       Truy cập trang about
       </Link>
