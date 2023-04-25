@@ -1,5 +1,9 @@
+import { HTMLAttributes } from 'react';
 import styled from "@emotion/styled";
-export const HeaderText = styled.div`
+interface HeaderTextProps extends HTMLAttributes<HTMLDivElement> {
+  name?: string;
+}
+export const HeaderText = styled.div<HeaderTextProps>`
   color: blue;
   width:300px;
   margin-top:200px;
